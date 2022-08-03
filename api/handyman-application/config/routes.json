@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/handyman-applications",
+      "handler": "handyman-application.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/handyman-applications/count",
+      "handler": "handyman-application.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/handyman-applications/:id",
+      "handler": "handyman-application.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/handyman-applications",
+      "handler": "handyman-application.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/handyman-applications/:id",
+      "handler": "handyman-application.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/handyman-applications/:id",
+      "handler": "handyman-application.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

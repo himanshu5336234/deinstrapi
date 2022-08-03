@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_homepage_services",
+  "info": {
+    "name": "Services",
+    "icon": "angle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "element": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.element"
+    }
+  }
+}

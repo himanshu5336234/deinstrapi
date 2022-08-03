@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_homepage_elements",
+  "info": {
+    "name": "element",
+    "icon": "angle-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

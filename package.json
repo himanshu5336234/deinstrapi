@@ -1,0 +1,46 @@
+{
+  "name": "dein-hausmann-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@paypal/payouts-sdk": "^1.1.1",
+    "otp-generator": "^2.0.0",
+    "otplib": "^12.0.1",
+    "socket.io": "^4.1.2",
+    "strapi": "3.6.0",
+    "strapi-admin": "3.6.0",
+    "strapi-connector-mongoose": "3.6.0",
+    "strapi-plugin-content-manager": "3.6.0",
+    "strapi-plugin-content-type-builder": "3.6.0",
+    "strapi-plugin-documentation": "^3.6.0",
+    "strapi-plugin-email": "3.6.0",
+    "strapi-plugin-graphql": "^3.6.0",
+    "strapi-plugin-i18n": "3.6.0",
+    "strapi-plugin-upload": "3.6.0",
+    "strapi-plugin-users-permissions": "3.6.0",
+    "strapi-provider-email-sendinblue": "npm:@yanotoma/strapi-provider-email-sendinblue@1.1.0",
+    "strapi-provider-upload-cloudinary": "^3.6.0",
+    "strapi-utils": "3.6.0",
+    "stripe": "^8.222.0",
+    "twilio": "^3.61.0",
+    "uuid": "^8.3.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "04c53c20-761c-45a5-9a0e-b6141b5b0112"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": "^6.0.0"
+  },
+  "license": "MIT"
+}

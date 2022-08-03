@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_form_service_forms",
+  "info": {
+    "name": "serviceForm",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "number",
+        "email"
+      ],
+      "default": "text"
+    }
+  }
+}

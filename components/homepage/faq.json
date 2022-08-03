@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_homepage_faqs",
+  "info": {
+    "name": "faq",
+    "icon": "angry"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

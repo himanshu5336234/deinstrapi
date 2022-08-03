@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/v1/orders/payment/seller",
+      "handler": "orders.payoutToSeller",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v1/orders/payment",
+      "handler": "orders.acceptPayment",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/v1/payments/addCards",
+      "handler": "orders.addCards",
+      "config" : {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders",
+      "handler": "orders.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders/count",
+      "handler": "orders.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders/:id",
+      "handler": "orders.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orders",
+      "handler": "orders.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/orders/:id",
+      "handler": "orders.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/orders/:id",
+      "handler": "orders.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

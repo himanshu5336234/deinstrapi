@@ -1,0 +1,63 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "HomePage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.services"
+    },
+    "howitworks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.howitworks"
+    },
+    "whychooseus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.whychooseus"
+    },
+    "Spotlight": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.spotlight"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.testimonials"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.faq"
+    },
+    "aboutdien": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.aboutdien"
+    }
+  }
+}

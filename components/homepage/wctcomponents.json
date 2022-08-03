@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_wctcomponents",
+  "info": {
+    "name": "wctcomponents",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

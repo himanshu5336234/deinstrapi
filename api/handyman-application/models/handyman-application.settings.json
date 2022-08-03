@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "handyman_applications",
+  "info": {
+    "name": "handymanApplication",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "regex": "^[a-zA-Z ]*$",
+      "required": true
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "phone": {
+      "type": "biginteger",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "proof": {
+      "type": "component",
+      "repeatable": true,
+      "component": "documents.proof",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "rejected",
+        "inReview"
+      ],
+      "default": "inReview",
+      "required": false
+    },
+    "user": {
+      "via": "handyman_application",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

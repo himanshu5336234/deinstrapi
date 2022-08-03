@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chat_messages",
+  "info": {
+    "name": "chatMessages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chatRoom": {
+      "model": "chat-rooms",
+      "via": "chat_message"
+    },
+    "messages": {
+      "type": "json"
+    }
+  }
+}

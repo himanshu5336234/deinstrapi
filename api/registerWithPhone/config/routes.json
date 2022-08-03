@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/register-with-phone",
+      "handler": "registerWithPhone.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/verify-user",
+      "handler": "registerWithPhone.verify",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/resend-otp",
+      "handler": "registerWithPhone.resendOtp",
+      "config": {
+        "policies": []
+      }
+    }
+
+  ]
+}

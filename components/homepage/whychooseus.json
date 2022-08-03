@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_homepage_whychooseuses",
+  "info": {
+    "name": "whychooseus",
+    "icon": "align-right"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "wctcomponents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.wctcomponents"
+    }
+  }
+}

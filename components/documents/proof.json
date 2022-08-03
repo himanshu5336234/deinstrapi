@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_documents_proofs",
+  "info": {
+    "name": "proof",
+    "icon": "arrow-alt-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "document": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chat_rooms",
+  "info": {
+    "name": "chatRooms",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seller": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "chat"
+    },
+    "buyer": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "chats"
+    },
+    "order": {
+      "model": "orders"
+    },
+    "messages": {
+      "type": "json"
+    },
+    "chat_message": {
+      "via": "chatRoom",
+      "model": "chat-messages"
+    }
+  }
+}

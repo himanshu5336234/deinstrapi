@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gigs",
+      "handler": "gigs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gigs/count",
+      "handler": "gigs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gigs/me",
+      "handler": "gigs.me",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gigs/save/:id",
+      "handler": "gigs.saveGig",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gigs/unsave/:id",
+      "handler": "gigs.unsaveGig",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gigs/:id",
+      "handler": "gigs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gigs",
+      "handler": "gigs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gigs/:id",
+      "handler": "gigs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gigs/:id",
+      "handler": "gigs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

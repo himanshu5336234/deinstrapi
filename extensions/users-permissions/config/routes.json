@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/users/update/me",
+      "handler": "User.updateMe",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Update an existing user",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "update"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chat-rooms",
+      "handler": "chat-rooms.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chat-rooms/me",
+      "handler": "chat-rooms.findMyRooms",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chat-rooms/count",
+      "handler": "chat-rooms.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chat-rooms/:roomId",
+      "handler": "chat-rooms.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chat-rooms",
+      "handler": "chat-rooms.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chat-rooms/mark-read/:roomId",
+      "handler": "chat-rooms.markConversationReadByRoomId",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chat-rooms/:id",
+      "handler": "chat-rooms.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chat-rooms/:id",
+      "handler": "chat-rooms.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

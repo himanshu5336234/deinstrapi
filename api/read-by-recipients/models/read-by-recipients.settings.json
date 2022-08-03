@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "read_by_recipients",
+  "info": {
+    "name": "readByRecipients",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "readAt": {
+      "type": "datetime",
+      "required": false
+    }
+  }
+}

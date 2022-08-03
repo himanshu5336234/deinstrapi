@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+      integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const socket = io("http://localhost:1337", {
+        transportOptions: {
+          polling: {
+            extraHeaders: {
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwODlmMWRlYjFlNTRmNDY3NDA0YzU5ZCIsImlhdCI6MTYyMjY2MDMwNSwiZXhwIjoxNjI1MjUyMzA1fQ.8xBSVPJ14yDj5pXXSzalDhJ700R5n880C_AAZHoISi4",
+            },
+          },
+        },
+      });
+      let rooms = [];
+      let messages = [];
+      let userId = "6089f1deb1e54f467404c59d";
+      // To send an offer
+      socket.emit("identity", userId, (res) => {
+        console.log(res);
+      });
+      socket.on("new message", (data) => {
+        console.log("message", data);
+      });
+      let roomId = '60b6cdf5a68ff9470ca56c31';
+      socket.emit("subscribe", roomId, (data) => {
+        console.log("subscribe", data);
+      });
+    </script>
+  </body>
+</html>

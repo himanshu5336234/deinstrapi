@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ratings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "review.rating"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "clientStatus": {
+      "type": "enumeration",
+      "enum": [
+        "completed",
+        "accepted",
+        "cancelled",
+        "disputed",
+        "Awaiting"
+      ],
+      "default": "accepted",
+      "required": false
+    },
+    "buyer": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "seller": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order-details.details"
+    },
+    "timeline": {
+      "type": "json"
+    },
+    "service": {
+      "model": "serivces"
+    }
+  }
+}

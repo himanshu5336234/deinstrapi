@@ -1,0 +1,127 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "phone": {
+      "type": "string"
+    },
+    "otp": {
+      "type": "string"
+    },
+    "gigs": {
+      "collection": "gigs",
+      "via": "user"
+    },
+    "savedgigs": {
+      "collection": "gigs"
+    },
+    "orders": {
+      "via": "seller",
+      "collection": "orders"
+    },
+    "handyman_application": {
+      "model": "handyman-application",
+      "via": "user"
+    },
+    "phoneVerified": {
+      "type": "boolean",
+      "default": false,
+      "private": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "aboutMe": {
+      "type": "text",
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "profilePic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "reviews": {
+      "collection": "reviews",
+      "via": "seller"
+    },
+    "chat_rooms": {
+      "collection": "chat-rooms"
+    },
+    "card_id": {
+      "type": "string"
+    },
+    "chat": {
+      "via": "seller",
+      "collection": "chat-rooms"
+    },
+    "chats": {
+      "via": "buyer",
+      "collection": "chat-rooms"
+    }
+  }
+}

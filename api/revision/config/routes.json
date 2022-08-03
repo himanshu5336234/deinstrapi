@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/revisions",
+      "handler": "revision.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/revisions/count",
+      "handler": "revision.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/revisions/:id",
+      "handler": "revision.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/revisions",
+      "handler": "revision.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/revisions/:id",
+      "handler": "revision.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/revisions/:id",
+      "handler": "revision.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

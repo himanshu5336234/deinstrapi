@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/serivces",
+      "handler": "serivces.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/serivces/count",
+      "handler": "serivces.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/serivces/:id",
+      "handler": "serivces.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/serivces",
+      "handler": "serivces.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/serivces/:id",
+      "handler": "serivces.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/serivces/:id",
+      "handler": "serivces.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

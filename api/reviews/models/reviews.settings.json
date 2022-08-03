@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "reviews"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "buyerReview": {
+      "type": "string"
+    },
+    "buyerRating": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5,
+      "required": true
+    },
+    "sellerReview": {
+      "type": "string"
+    },
+    "sellerRating": {
+      "type": "decimal",
+      "max": 5,
+      "min": 0
+    },
+    "buyer": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reviews"
+    },
+    "seller": {
+      "via": "reviews",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

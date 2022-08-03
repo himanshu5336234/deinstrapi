@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_order_details_details",
+  "info": {
+    "name": "details",
+    "icon": "file-signature"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    }
+  }
+}
